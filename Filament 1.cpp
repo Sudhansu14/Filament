@@ -11,21 +11,22 @@
     
     length = strlen(string1);
     
-    for(i=0;i < length ;i++)
+	
+  if(string1[i] != string1[length-i-1])
+		
 	{
-        if(string1[i] != string1[length-i-1])
-		{
             flag = 1;
             break;
-        }
-    }
+        
+         }
     
     if (flag) 
 	{
         printf("%s is not a palindrome", string1);
-    }    
+       }   
+	 
     else 
 	{
         printf("%s is a palindrome", string1);
-    }
+       }
 }
