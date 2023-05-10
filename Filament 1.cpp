@@ -1,24 +1,31 @@
 #include<stdio.h>
 
-main()
-
+ main()
 {
-	char name[100];
-	char temp[100];
-	
-	printf("enter your string");
-	gets(name);
-	
-	strcpy(temp,name);
-	
-	printf("reverse your string=%s",strrev(name));
-	
-	if(strcmp(temp,name)==0)
+    char string1[20];
+    int i, length;
+    int flag = 0;
+    
+    printf("Enter a string:");
+    scanf("%s", string1);
+    
+    length = strlen(string1);
+    
+    for(i=0;i < length ;i++)
 	{
-		printf("your string is Palindrome");
-	}
-	else
+        if(string1[i] != string1[length-i-1])
+		{
+            flag = 1;
+            break;
+        }
+    }
+    
+    if (flag) 
 	{
-		printf("your string is not Palindrome");
-	}
+        printf("%s is not a palindrome", string1);
+    }    
+    else 
+	{
+        printf("%s is a palindrome", string1);
+    }
 }

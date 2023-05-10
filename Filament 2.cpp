@@ -1,29 +1,31 @@
-#include<stdio.h>
-
+#include<stdio.h> 
+ 
 main()
-
-{
-	char email[100];
-	char password[100];
-	
-	printf("enter your email");
-	gets(email);
-	
-	printf("enter your password");
-	gets(password);
-	
-	if(!strcmp(email,"dgo.3@gmail.com"); && !strcmp(password,"dgo12@"));
-	{
-    	printf("loging successful");
+ 
+{ 
+    char username[15]; 
+    char password[12]; 
+ 
+ 
+    printf("Enter your username:\n"); 
+    scanf("%s",&username); 
+ 
+    printf("Enter your password:\n"); 
+    scanf("%s",&password); 
+ 
+    if(strcmp(username,"chaitu")==0)
+	{ 
+        if(strcmp(password,"123")==0)
+		{ 
+            printf("\nWelcome.Login Success!"); 
+        }
+		else
+		{ 
+         printf("\nwrong password"); 
+        } 
     }
 	else
-		{
-    		printf("plz enter correct email");
-    	}
-
-	
-	
-	
-	
-	
-}
+	{ 
+    printf("\nUser doesn't exist"); 
+    } 
+} 
